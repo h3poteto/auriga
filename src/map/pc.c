@@ -966,7 +966,7 @@ int pc_equippoint(struct map_session_data *sd,int n)
 		int look = sd->inventory_data[n]->look;
 		ep = sd->inventory_data[n]->equip;
 		if(look == WT_DAGGER || look == WT_1HSWORD || look == WT_1HAXE) {
-			if(ep == LOC_RARM && (pc_checkskill(sd,AS_LEFT) > 0 || sd->s_class.job == PC_JOB_AS || sd->s_class.job == PC_JOB_GC || 
+			if(ep == LOC_RARM && (pc_checkskill(sd,AS_LEFT) > 0 || sd->s_class.job == PC_JOB_AS || sd->s_class.job == PC_JOB_GC ||
 				pc_checkskill(sd,KO_LEFT) > 0 || sd->s_class.job == PC_JOB_KG || sd->s_class.job == PC_JOB_OB))
 				return LOC_RARM | LOC_LARM;
 		}
