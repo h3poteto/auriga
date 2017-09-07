@@ -74,8 +74,8 @@ int attr_fix_table[MAX_ELE_LEVEL][ELE_MAX][ELE_MAX];
 // JOB TABLE
 //    NV,SM,MG,AC,AL,MC,TF,KN,PR,WZ,BS,HT,AS,CR,MO,SA,RG,AM,BA,DC,SNV,TK,SG,SL,GS,NJ,MB,DK,DA,RK,WL,RA,AB,NC,GC,LG,SO,MI,WA,SR,GN,SC,ESNV,KG,OB
 int max_job_table[PC_UPPER_MAX][PC_JOB_MAX] = {
-	{ 10,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,99,50,50,50,70,70,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50 }, // ’Êí
-	{ 10,50,50,50,50,50,50,70,70,70,70,70,70,70,70,70,70,70,70,70,99,50,50,50,70,70,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50 }, // “]¶
+	{ 10,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,99,50,50,50,70,70,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,50,50,50 }, // ’Êí
+	{ 10,50,50,50,50,50,50,70,70,70,70,70,70,70,70,70,70,70,70,70,99,50,50,50,70,70,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,50,50,50 }, // “]¶
 	{ 10,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,99,50,50,50,70,70,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50 }, // —{Žq
 };
 
@@ -965,7 +965,7 @@ int pc_equippoint(struct map_session_data *sd,int n)
 		int look = sd->inventory_data[n]->look;
 		ep = sd->inventory_data[n]->equip;
 		if(look == WT_DAGGER || look == WT_1HSWORD || look == WT_1HAXE) {
-			if(ep == LOC_RARM && (pc_checkskill(sd,AS_LEFT) > 0 || sd->s_class.job == PC_JOB_AS || sd->s_class.job == PC_JOB_GC || 
+			if(ep == LOC_RARM && (pc_checkskill(sd,AS_LEFT) > 0 || sd->s_class.job == PC_JOB_AS || sd->s_class.job == PC_JOB_GC ||
 				pc_checkskill(sd,KO_LEFT) > 0 || sd->s_class.job == PC_JOB_KG || sd->s_class.job == PC_JOB_OB))
 				return LOC_RARM | LOC_LARM;
 		}
