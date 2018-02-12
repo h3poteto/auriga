@@ -24,7 +24,7 @@
 
 #include "map.h"
 
-#define MAX_RAND_ITEM_TYPE		20
+#define MAX_RAND_ITEM_TYPE		100
 #define MAX_RAND_ITEM_ENTRY		1000
 #define MAX_RAND_ITEM_AMOUNT	10000
 
