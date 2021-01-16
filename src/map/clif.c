@@ -21317,17 +21317,17 @@ void clif_hat_effects(struct map_session_data* sd, struct block_list* bl, int ta
 void clif_hat_effect_single(struct map_session_data* sd, int effectId, bool enable)
 {
 #if PACKETVER >= 20150513
-	unsigned char buf[11];
+	unsigned char buf[13];
 
 	nullpo_retv(sd);
 
 	WBUFW(buf,0) = 0xa3b;
-	WBUFW(buf,2) = 11;
+	WBUFW(buf,2) = 13;
 	WBUFL(buf,4) = sd->bl.id;
 	WBUFB(buf,8) = enable;
-	WBUFW(buf,9) = effectId;
+	WBUFL(buf,9) = effectId;
 
-	clif_send(buf,WBUFW(buf,2),&sd->bl,AREA);
+	clif_send(buf,packet_db[0xa3b].len,&sd->bl,AREA);
 #endif
 	return;
 }

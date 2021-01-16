@@ -1774,7 +1774,6 @@ static int map_mdmap_clean(struct block_list *bl, va_list ap)
 			if(nd) {
 				if(nd->subtype == SCRIPT) {
 					npc_timerevent_stop(nd);
-					script_erase_sleeptimer(nd);
 				}
 				npc_free(nd);
 			}

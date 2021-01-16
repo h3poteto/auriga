@@ -470,7 +470,7 @@
 //1391 [2020/02/29] by refis
 
 ・実績、称号システム実装
-(common/mmo.h, achieve.*, map.*, mob.c, clif.*, friend.c, pc.c, pet.c, quest.c, vending.c, 
+(common/mmo.h, achieve.*, map.*, mob.c, clif.*, friend.c, pc.c, pet.c, quest.c, vending.c,
 　conf/lua_auriga.conf, doc/db_ref.txt, db/achievement_db.lua, db/achievement_level_db.lua)
 
 ・セーブデータ対象に実績、称号関連情報を追加 (inter_auriga.conf, map/intif.*, char/inter.c, char/chardb_*.c, char/int_achieve.*, char/achievedb_*.*)
